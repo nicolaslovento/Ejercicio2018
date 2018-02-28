@@ -1,0 +1,10 @@
+15 -
+
+
+
+UPDATE Productos 
+SET Tamaño = 'MEDIANO' 
+where Tamaño ='chico' 
+and Productos.pNumero in( select pNumero
+							from Envios  
+							where Envios.Cantidad >= 300)
